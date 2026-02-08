@@ -3,6 +3,19 @@
 This repository contains a rule-based NLP application that estimates sentence meaning
 and explains how each word contributes to the overall semantics.
 
+## Quick start
+
+```bash
+python -m nlp_semantics "The very happy dog didn't chase the cat today."
+```
+
+Or install the CLI entry point (editable install shown):
+
+```bash
+pip install -e .
+semantic-analyze "Do all students really understand the lecture?"
+```
+
 ## Web app (React + Vite)
 
 Start the React UI:
@@ -17,12 +30,11 @@ Open the UI at `http://localhost:5173`. The semantic analysis runs entirely in t
 
 ### Deploying the UI on Netlify
 
-1. Create a new Netlify site from this repo.
-2. The included `netlify.toml` sets the base directory to `webapp`, the build command to
-   `npm run build`, and the publish directory to `dist`.
+1. Create a new Netlify site from the `webapp` folder.
+2. Set the build command to `npm run build` and the publish directory to `dist`.
 3. Deploy! The app is self-contained and does not require a backend API.
 
-A sample configuration is provided in `netlify.toml` (root) as well as `webapp/netlify.toml`.
+A sample configuration is provided in `webapp/netlify.toml`.
 
 ## Output overview
 
@@ -41,4 +53,5 @@ The analyzer returns a structured dictionary containing:
 
 This is a lightweight, interpretable baseline. It does not rely on external ML
 models, so it is intentionally heuristic and conservative. You can extend the
-lexicons and the heuristics in `webapp/src/semantics.js`.
+lexicons and the role heuristics in `nlp_semantics/lexicon.py` and
+`nlp_semantics/semantics.py`.
