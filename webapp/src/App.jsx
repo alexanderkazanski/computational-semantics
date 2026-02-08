@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { analyzeSentence } from "./semantics.js";
+import { analyzeSentence } from "./semantics.ts";
 
 const sampleSentence = "The very happy dog didn't chase the cat today.";
 
