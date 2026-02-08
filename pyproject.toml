@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nlp-semantics"
+version = "0.1.0"
+description = "Rule-based semantic analyzer with word-level influence breakdown."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "OpenAI Codex"}]
+
+[project.scripts]
+semantic-analyze = "nlp_semantics.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nlp_semantics*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
