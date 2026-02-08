@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
-import { analyzeSentence } from "./semantics.ts";
+import { analyzeSentence } from "./semantics.js";
 
-const sampleSentence = "The very happy dog didn't chase the cat today.";
+const sampleSentence = "Every compiler optimizes the abstract syntax tree before code generation.";
 
 export default function App() {
   const [sentence, setSentence] = useState(sampleSentence);
